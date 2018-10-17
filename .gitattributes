@@ -1,0 +1,17 @@
+app/libs/TGSDKADCentrixlink.1.8.1.aar filter=lfs diff=lfs merge=lfs -text
+app/libs/TGSDKADLanmei.1.8.1.aar filter=lfs diff=lfs merge=lfs -text
+app/libs/TGSDKADShenqiad.1.8.1.aar filter=lfs diff=lfs merge=lfs -text
+app/libs/TGSDKADUniplay.1.8.1.aar filter=lfs diff=lfs merge=lfs -text
+app/libs/TGSDKADBytedance.1.8.1.aar filter=lfs diff=lfs merge=lfs -text
+app/libs/TGSDKADGuangdiantong.1.8.1.aar filter=lfs diff=lfs merge=lfs -text
+app/libs/TGSDKADOneway.1.8.1.aar filter=lfs diff=lfs merge=lfs -text
+app/libs/TGSDKADTuia.1.8.1.aar filter=lfs diff=lfs merge=lfs -text
+app/libs/TGSDKADBaiyun.1.8.1.aar filter=lfs diff=lfs merge=lfs -text
+app/libs/TGSDKADDurian.1.8.1.aar filter=lfs diff=lfs merge=lfs -text
+app/libs/TGSDKADJuzhang.1.8.1.aar filter=lfs diff=lfs merge=lfs -text
+app/libs/TGSDKADMobvista.1.8.1.aar filter=lfs diff=lfs merge=lfs -text
+app/libs/TGSDKADTgadsdk.1.8.1.aar filter=lfs diff=lfs merge=lfs -text
+app/libs/TGSDK.1.8.1.aar filter=lfs diff=lfs merge=lfs -text
+app/libs/TGSDKADBianxianmao.1.8.1.aar filter=lfs diff=lfs merge=lfs -text
+app/libs/TGSDKADYima.1.8.1.aar filter=lfs diff=lfs merge=lfs -text
+app/libs/TGSDKADZplayads.1.8.1.aar filter=lfs diff=lfs merge=lfs -text
