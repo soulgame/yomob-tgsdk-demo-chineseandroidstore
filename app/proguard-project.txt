@@ -54,22 +54,6 @@
 -keep class com.yomob.tgsdklib.** { *; }
 -keep interface com.yomob.tgsdklib.** { *; }
 
-# ZplayAds
--keep class com.playableads.** { *;}
--keep class com.playableads.PlayPreloadingListener {*;}
--keep class com.playableads.PlayLoadingListener {*;}
--keep class * implements com.playableads.PlayPreloadingListener {*;}
--keep class * implements com.playableads.PlayLoadingListener {*;}
--keep class com.playableads.PlayableAds {
-    public void onDestroy();
-    public static com.playableads.PlayableAds getInstance();
-    public void requestPlayableAds(com.playableads.PlayPreloadingListener);
-    public void requestPlayableAds(java.lang.String, com.playableads.PlayPreloadingListener);
-    public synchronized static com.playableads.PlayableAds init(android.content.Context, java.lang.String, java.lang.String);
-    public void presentPlayableAD(android.content.Context, com.playableads.PlayLoadingListener);
-    public boolean canPresentAd();
-}
-
 # Guangdiantong
 -keep class com.qq.e.** {
     public protected *;
@@ -80,7 +64,13 @@
 -keep class android.support.v4.**{ *;}
 
 # Baidu
--keep class com.baidu.** { *; }
+ -keepclassmembers class * extends android.app.Activity { public void *(android.view.View);
+}
+-keepclassmembers enum * {
+public static **[] values();
+public static ** valueOf(java.lang.String);
+}
+-keep class com.baidu.mobads.*.** { *; }
 
 # Centrixlink
 -dontwarn com.centrixlink.**
@@ -98,8 +88,22 @@
     -keep interface com.alphab.** {*; }
 
 # Uniplay
--keep public class com.uniplay.adsdk.**{*;}
--keep public class com.mi.adtracker.**{*;}
+-keep class com.uniplay.adsdk.**
+-keep class com.joomob.**
+-keep class * implements android.os.Parcelable {
+  public static final android.os.Parcelable$Creator *;
+}
+-keepattributes Annotation
+-keepattributes JavascriptInterface
+-keepclassmembers class * {
+@android.webkit.JavascriptInterface <methods>;
+}
+-keepclassmembers public class com.uniplay.adsdk.JavaScriptInterface{
+<fields>;
+<methods>;
+public *;
+private *;
+}
 
     # Vungle
     -keep class com.vungle.warren.** { *; }
@@ -131,3 +135,16 @@
 -keepattributes *Annotation*
 -keep enum mobi.oneway.sdk.* {*;}
 -keep class mobi.oneway.sdk.** {*;}
+-dontwarn com.liulishuo.okdownload.**
+-keep class com.liulishuo.okdownload.core.breakpoint.BreakpointStoreOnSQLite {
+    public com.liulishuo.okdownload.core.breakpoint.DownloadStore createRemitSelf();
+    public com.liulishuo.okdownload.core.breakpoint.BreakpointStoreOnSQLite(android.content.Context);
+}
+# okdownload:okhttp
+-keepnames class com.liulishuo.okdownload.core.connection.DownloadOk
+-dontwarn okhttp3.**
+-dontwarn okio.**
+-dontwarn javax.annotation.**
+-dontwarn org.conscrypt.**
+# A resource is loaded with a relative path so the package of this class must be preserved.
+-keepnames class okhttp3.internal.publicsuffix.PublicSuffixDatabase
