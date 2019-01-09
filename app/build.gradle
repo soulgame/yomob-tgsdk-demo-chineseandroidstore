@@ -10,7 +10,7 @@ android {
         applicationId "com.soulgame.tgsdksampleapp.android"
         minSdkVersion 16
         targetSdkVersion 26
-        versionCode 1545980789
+        versionCode 1547003056
         versionName "1.8.3"
         multiDexEnabled true
         ndk {
@@ -78,6 +78,7 @@ dependencies {
     compile(name: 'TGSDKADMobvista.1.8.3', ext: 'aar')
     compile(name: 'TGSDKADUniplay.1.8.3', ext: 'aar')
     compile(name: 'TGSDKADVungle.1.8.3', ext: 'aar')
+    compile(name: 'TGSDKADYoads.1.8.3', ext: 'aar')
     compile(name: 'TGSDKADBytedance.1.8.3', ext: 'aar')
     compile(name: 'TGSDKADOneway.1.8.3', ext: 'aar')
 
